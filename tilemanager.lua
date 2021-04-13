@@ -1,6 +1,6 @@
 local class = require("30log");
 
-local TILES_PATH = "src/assets/sprites/tiles/"; -- or any path depending on your project
+local TILES_PATH = "tiles/"; -- or any path depending on your project
 
 local tilemanager = class("tilemanager", {
   map = nil,
@@ -118,7 +118,6 @@ tilemanager.drawTile = function(self, view, x, y, tilePos)
        if self.cacheOn then self:drawCache(x ,y ,index ,tilePos) end
        local newI = x..y;
        if self.collidables[tonumber(tilePos)] and self.collidables[tonumber(tilePos)][newI] == nil then
-        print(tilePos, x, y);
         self.collidables[tonumber(tilePos)][newI] = newI;
        end
       lg.draw(self.tilesets[index].image, self.quads[tilePos], x, y);
