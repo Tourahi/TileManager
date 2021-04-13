@@ -1,5 +1,5 @@
 # TileManager
-Personal class (30log) i use for my current project to manage tilemaps data exported from Tiled in lua form. 
+A class i am using for my current project to manage tilemaps data exported from Tiled in lua form. 
 
 #### What it does :
 * Associate the quad to the tileset where it exists.
