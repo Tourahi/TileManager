@@ -109,7 +109,7 @@ tilemanager.drawTile = function(self, x, y, tilePos)
   end
 
   local index = 1;
-  local multi = 0; -- multiplayer
+  local multi = 0; 
   local lastTileQuads = self.tilesets[index].Qnumber; -- Hold the last tile quads
   local size = self.tilesets[index].Qnumber;
 
