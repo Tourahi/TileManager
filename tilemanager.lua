@@ -97,7 +97,7 @@ tilemanager.drawCache = function(self, x, y, index, tilePos)
   };
 end
 
-tilemanager.drawTile = function(self, view, x, y, tilePos)
+tilemanager.drawTile = function(self, x, y, tilePos)
 
   local lg = love.graphics;
 
@@ -173,7 +173,7 @@ local seperateS = function(s)
   return output;
 end
 
-tilemanager.draw = function(self, view)
+tilemanager.draw = function(self)
   for _, layer in ipairs(self.layers) do
     local data = seperateS(layer.data);
     for i = 1 , #data do
@@ -183,7 +183,7 @@ tilemanager.draw = function(self, view)
       local y = math.floor((i-1) / layer.width) * self.tileheight;
 
       if tilePos ~= 0 then
-        self:drawTile(view, x, y, tilePos, i)
+        self:drawTile(x, y, tilePos, i)
       end
     end
   end
