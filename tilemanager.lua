@@ -168,7 +168,7 @@ end
 local seperateS = function(s)
   local output = {};
   for match in s:gmatch("([%d%.%+%-]+),?") do
-    output[#output + 1] = tonumber(match)
+    output[#output + 1] = tonumber(match);
   end
   return output;
 end
@@ -183,7 +183,7 @@ tilemanager.draw = function(self)
       local y = math.floor((i-1) / layer.width) * self.tileheight;
 
       if tilePos ~= 0 then
-        self:drawTile(x, y, tilePos, i)
+        self:drawTile(x, y, tilePos, i);
       end
     end
   end
