@@ -154,7 +154,7 @@ end
 tilemanager.isTileWalkable = function(self, x, y)
   local xx = math.floor((x + self.tilewidth) / self.tilewidth - 1) * self.tilewidth;
   local yy = math.floor((y + self.tileheight) / self.tileheight - 1)  * self.tileheight;
-  return self:isWallkable(xx..yy);
+  return self:isWalkable(xx..yy);
 end
 
 tilemanager.initAll = function(self, Tdata, lg)
